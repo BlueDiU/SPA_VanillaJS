@@ -11,4 +11,6 @@ export function Menu() {
      <a href="https://aprendejavascript.org/" target="_blank" rel="noopener">Aprender JS</a>
      <span>-</span>
     `;
+
+  return $menu;
 }
