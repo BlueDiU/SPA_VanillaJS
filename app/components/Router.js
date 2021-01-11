@@ -16,6 +16,7 @@ export async function Router() {
       url: api.POSTS,
       cbSuccess: (posts) => {
         let html = '';
+        console.log(posts);
         posts.forEach((post) => (html += PostCard(post)));
         $main.innerHTML = html;
       },
