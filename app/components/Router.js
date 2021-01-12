@@ -22,7 +22,7 @@ export async function Router() {
       },
     });
   } else if (hash.includes('#/search')) {
-    $main.innerHTML = 'Buscador';
+    $main.innerHTML = '<p>Buscador</p>';
   } else if (hash === '#/contacto') {
     $main.innerHTML = 'contacto';
   } else {
