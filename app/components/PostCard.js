@@ -5,6 +5,12 @@ export function PostCard(props) {
       ? _embedded['wp:featuredmedia'][0].source_url
       : 'app/assets/favicon.svg';
 
+  document.addEventListener('click', (e) => {
+    if (!e.target.matches('.post-card a')) return false;
+
+    localStorage.setItem('wpPostId', e.target.dataset.id);
+  });
+
   return `
     <article class="post-card">
       <img src="${urlPoster}" alt="${title.rendered}">

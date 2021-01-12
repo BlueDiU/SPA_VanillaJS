@@ -62,7 +62,7 @@ img {
   position: sticky;
   top: 0;
   text-align: center;
-  background-color: #ffff;
+  background-color: #f8f9f9;
 }
 
 .header > * {
@@ -87,6 +87,42 @@ img {
 .post-card p {
   display: flex;
   justify-content: space-between;
+}
+
+.post-page {
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 80%;
+  background: #eceff1;
+}
+
+.post-page > aside {
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+
+.post-page > hr {
+  border: thin solid #cfd8dc;
+  margin: 2rem auto;
+  width: 80%;
+}
+.post-page > time {
+  margin: 1rem auto;
+  display: block;
+}
+
+.post-page > article´ {
+  padding: 0 2rem;
+}
+
+.post-page img,
+.post-page audio,
+.post-page iframe,
+.post-page video {
+  margin: auto;
+  display: block;
+  max-width: 100%;
 }
 
 .loader {

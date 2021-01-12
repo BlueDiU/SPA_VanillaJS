@@ -1,6 +1,7 @@
 import api from '../helpers/wp-api.js';
 import { ajax } from '../helpers/ajax.js';
 import { PostCard } from './PostCard.js';
+import { Post } from './Post.js';
 
 export async function Router() {
   const d = document,
@@ -25,7 +26,13 @@ export async function Router() {
   } else if (hash === '#/contacto') {
     $main.innerHTML = 'contacto';
   } else {
-    $main.innerHTML = 'post seleccionado';
+    await ajax({
+      url: `${api.POST}/${localStorage.getItem('wpPostId')}`,
+      cbSuccess: (post) => {
+        console.log(post);
+        $main.innerHTML = Post(post);
+      },
+    });
   }
 
   d.querySelector('.loader').style.display = 'none';
