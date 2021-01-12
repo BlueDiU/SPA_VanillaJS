@@ -10,7 +10,7 @@ export async function ajax(props) {
 
       document.getElementById('main').innerHTML = `
         <div class="error">
-            <p>Error: ${err.status}: ${message}</p>
+          <p>Error: ${err.status}: ${message}</p>
         <div>
       `;
       document.querySelector('.loader').style.display = 'none';
