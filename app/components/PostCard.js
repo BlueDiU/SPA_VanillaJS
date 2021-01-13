@@ -20,5 +20,5 @@ export function PostCard(props) {
         <a href="#/${slug}" data-id="${id}">Ver Publicación</a>
       </p>
     </article>
-    `;
+  `;
 }
